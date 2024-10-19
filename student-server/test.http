@@ -1,0 +1,124 @@
+### Create a new batch ###
+
+# POST request to create a new batch
+POST http://localhost:3000/api/batches
+Content-Type: application/json
+
+{
+  "name": "Batch 2024",
+  "startYear": 2024,
+  "subjects": ["subject_id_1", "subject_id_2"]  // Replace with existing subject IDs
+}
+
+### Get all batches ###
+
+# GET request to retrieve all batches
+GET http://localhost:3000/api/batches
+
+### Get a single batch by ID ###
+
+# GET request to retrieve a batch by ID
+GET http://localhost:3000/api/batches/batch_id_here  // Replace 'batch_id_here' with an existing batch ID
+
+### Update a batch by ID ###
+
+# PUT request to update a batch by ID
+PUT http://localhost:3000/api/batches/batch_id_here  // Replace 'batch_id_here' with an existing batch ID
+Content-Type: application/json
+
+{
+  "name": "Updated Batch Name",
+  "startYear": 2025,
+  "subjects": ["subject_id_1", "subject_id_3"]  // Replace with updated subject IDs
+}
+
+### Delete a batch by ID ###
+
+# DELETE request to delete a batch by ID
+DELETE http://localhost:3000/api/batches/batch_id_here  // Replace 'batch_id_here' with an existing batch ID
+
+
+### Create a new subject ###
+
+# POST request to create a new subject
+POST http://localhost:3000/api/subjects
+Content-Type: application/json
+
+{
+  "name": "Mathematics",
+  "code": "MATH101",
+  "credits": 3,
+  "teacher": "John Smith"
+}
+
+### Get all subjects ###
+
+# GET request to retrieve all subjects
+GET http://localhost:3000/api/subjects
+
+### Get a single subject by ID ###
+
+# GET request to retrieve a subject by ID
+GET http://localhost:3000/api/subjects/subject_id_here  // Replace 'subject_id_here' with an existing subject ID
+
+### Update a subject by ID ###
+
+# PUT request to update a subject by ID
+PUT http://localhost:3000/api/subjects/subject_id_here  // Replace 'subject_id_here' with an existing subject ID
+Content-Type: application/json
+
+{
+  "name": "Updated Mathematics",
+  "code": "MATH101",
+  "credits": 4,
+  "teacher": "Jane Doe"
+}
+
+### Delete a subject by ID ###
+
+# DELETE request to delete a subject by ID
+DELETE http://localhost:3000/api/subjects/subject_id_here  // Replace 'subject_id_here' with an existing subject ID
+
+### Create a new student ###
+
+# POST request to create a new student
+POST http://localhost:3000/api/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "rollNo": "123456",
+  "age": 20,
+  "email": "johndoe@example.com",
+  "batch": "batch_id_here",  // Replace with an existing batch ID
+  "subjects": [
+    { "subject": "subject_id_1_here", "marks": 85 },  // Replace with an existing subject ID and marks
+    { "subject": "subject_id_2_here", "marks": 70 }   // Replace with another existing subject ID and marks
+  ]
+}
+
+### Get all students ###
+
+# GET request to retrieve all students
+GET http://localhost:3000/api/students
+
+### Get a single student by ID ###
+
+# GET request to retrieve a student by ID
+GET http://localhost:3000/api/students/student_id_here  // Replace 'student_id_here' with an existing student ID
+
+### Update a student by ID ###
+
+# PUT request to update a student by ID
+PUT http://localhost:3000/api/students/student_id_here  // Replace 'student_id_here' with an existing student ID
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "age": 21
+}
+
+### Delete a student by ID ###
+
+# DELETE request to delete a student by ID
+DELETE http://localhost:3000/api/students/student_id_here  // Replace 'student_id_here' with an existing student ID
